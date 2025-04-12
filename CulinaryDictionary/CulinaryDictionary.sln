@@ -1,0 +1,30 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35931.197
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CulinaryDictionary", "CulinaryDictionary.csproj", "{40913121-B657-43DB-856F-A40A229D8E55}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CardDish", "..\CardDish\CardDish.csproj", "{B15F863B-E44B-483A-8A2A-E3FEF7EED951}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{40913121-B657-43DB-856F-A40A229D8E55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40913121-B657-43DB-856F-A40A229D8E55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40913121-B657-43DB-856F-A40A229D8E55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40913121-B657-43DB-856F-A40A229D8E55}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B15F863B-E44B-483A-8A2A-E3FEF7EED951}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B15F863B-E44B-483A-8A2A-E3FEF7EED951}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B15F863B-E44B-483A-8A2A-E3FEF7EED951}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B15F863B-E44B-483A-8A2A-E3FEF7EED951}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {40EA4506-7132-4AB1-8376-1C19203C194B}
+	EndGlobalSection
+EndGlobal
