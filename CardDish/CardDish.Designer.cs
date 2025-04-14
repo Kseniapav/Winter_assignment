@@ -69,6 +69,7 @@
             this.Controls.Add(this.picDishImage);
             this.Name = "CardDish";
             this.Size = new System.Drawing.Size(212, 286);
+            this.Load += new System.EventHandler(this.CardDish_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picDishImage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
