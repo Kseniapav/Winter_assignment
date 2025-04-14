@@ -68,25 +68,7 @@ namespace CulinaryDictionary
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            // Для SplitContainer
-            splitContainer1.Dock = DockStyle.Fill;
-            splitContainer1.SplitterDistance = 200; // Ширина левой панели
-
-            // Для TreeView
-            treeViewCategories.Dock = DockStyle.Fill;
-            treeViewCategories.HideSelection = false;
-
-            // Для FlowLayoutPanel
-            flowLayoutDishes.Dock = DockStyle.Fill;
-            flowLayoutDishes.AutoScroll = true;
-            flowLayoutDishes.WrapContents = false;
-            flowLayoutDishes.FlowDirection = FlowDirection.TopDown;
-
-            // Для Label
-            lblCategoryName.Dock = DockStyle.Top;
-            lblCategoryName.Font = new Font("Segoe UI", 12, FontStyle.Bold);
-            lblCategoryName.TextAlign = ContentAlignment.MiddleCenter;
-            lblCategoryName.Height = 40;
+            
         }
     }
 }

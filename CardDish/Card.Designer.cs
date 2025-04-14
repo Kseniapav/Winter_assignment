@@ -38,7 +38,7 @@
             // 
             this.picDishImage.Location = new System.Drawing.Point(3, 12);
             this.picDishImage.Name = "picDishImage";
-            this.picDishImage.Size = new System.Drawing.Size(206, 195);
+            this.picDishImage.Size = new System.Drawing.Size(253, 195);
             this.picDishImage.TabIndex = 0;
             this.picDishImage.TabStop = false;
             // 
@@ -54,7 +54,7 @@
             // lblPrice
             // 
             this.lblPrice.AutoSize = true;
-            this.lblPrice.Location = new System.Drawing.Point(154, 257);
+            this.lblPrice.Location = new System.Drawing.Point(121, 257);
             this.lblPrice.Name = "lblPrice";
             this.lblPrice.Size = new System.Drawing.Size(35, 13);
             this.lblPrice.TabIndex = 2;
@@ -68,7 +68,7 @@
             this.Controls.Add(this.lblDishName);
             this.Controls.Add(this.picDishImage);
             this.Name = "Card";
-            this.Size = new System.Drawing.Size(212, 286);
+            this.Size = new System.Drawing.Size(259, 286);
             this.Load += new System.EventHandler(this.CardDish_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picDishImage)).EndInit();
             this.ResumeLayout(false);

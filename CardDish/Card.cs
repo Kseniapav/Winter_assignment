@@ -11,29 +11,13 @@ using System.IO;
 
 namespace CardDish
 {
-    public partial class Card: UserControl
-    {      
+    public partial class Card : UserControl
+    {
+        private readonly string ImagePath;
 
         public Card()
         {
-            InitializeComponent();this.BorderStyle = BorderStyle.FixedSingle;
-        this.BackColor = Color.White;
-        this.Padding = new Padding(10);
-        this.Margin = new Padding(10);
-        this.Width = 300;
-
-            picDishImage.SizeMode = PictureBoxSizeMode.Zoom;
-            picDishImage.Height = 150;
-            picDishImage.Dock = DockStyle.Top;
-            picDishImage.BackColor = Color.WhiteSmoke;
-
-            lblDishName.Font = new Font("Segoe UI", 12, FontStyle.Bold);
-            lblDishName.Dock = DockStyle.Top;
-            lblDishName.Margin = new Padding(0, 10, 0, 5);
-
-            lblPrice.Font = new Font("Segoe UI", 9, FontStyle.Bold);
-            lblPrice.Dock = DockStyle.Top;
-            lblPrice.Margin = new Padding(0, 10, 0, 0);
+            InitializeComponent(); this.BorderStyle = BorderStyle.FixedSingle;
 
             this.MouseEnter += CardDish_MouseEnter; ;
             this.MouseLeave += CardDish_MouseLeave; ;
@@ -53,47 +37,44 @@ namespace CardDish
         {
 
         }
-        public void SetDishInfo(Card dish)
+        public void SetDishInfo(Card DataRepository)
         {
-            // Устанавливаем название блюда
-            lblDishName.Text = dish.Name ?? "Без названия";
+            // Устанавливаем название
+            lblDishName.Text = DataRepository.Name;
 
-            // Устанавливаем цену (исправлено с dish.Price)
-            lblPrice.Text = $"Цена: {dish.lblPrice} ₽";
+            // Устанавливаем цену
+            lblPrice.Text = $"Цена: {DataRepository.lblPrice} ₽";
 
             // Загружаем изображение
-            if (!string.IsNullOrEmpty(dish.ImagePath))
+            if (!string.IsNullOrEmpty(DataRepository.ImagePath))
             {
-                string imagePath = Path.Combine(Application.StartupPath, "Images", "Dishes", dish.ImagePath);
+                string fullPath = Path.Combine(Application.StartupPath, "Images", "Dishes", DataRepository.ImagePath);
 
                 try
                 {
-                    if (File.Exists(imagePath))
+                    if (File.Exists(fullPath))
                     {
-                        // Освобождаем предыдущее изображение
-                        if (picDishImage.Image != null)
-                        {
-                            var oldImage = picDishImage.Image;
-                            picDishImage.Image = null;
-                            oldImage.Dispose();
-                        }
-
-                        picDishImage.Image = Image.FromFile(imagePath);
+                        picDishImage.Image?.Dispose(); // Освобождаем старое изображение
+                        picDishImage.Image = Image.FromFile(fullPath);
                     }
                     else
                     {
-                        
+
                     }
                 }
                 catch
                 {
-                   
+
                 }
             }
         }
 
        
     }
+}
+
+       
+    
 
     
-}
+
