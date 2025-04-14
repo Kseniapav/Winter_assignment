@@ -13,25 +13,25 @@ namespace CulinaryDictionary
         public static void InitializeSampleData()
         {
             var breakfast = new Category { Name = "Завтраки"};
-            breakfast.Dishes.Add(new Dish
+            breakfast.Dishes.Add(new infoDish
             {
                 Name = "Скрэмбл с тигровыми креветками и авокадо, 230 грамм",
                 Price = 690,
                 ImagePath = "1.JPG"
             });
-            breakfast.Dishes.Add(new Dish
+            breakfast.Dishes.Add(new infoDish
             {
                 Name = "Тост с авокадо, яйцом пашот и лососем, 160 грамм",
                 Price = 630,
                 ImagePath = "2.JPG"
             });
-            breakfast.Dishes.Add(new Dish
+            breakfast.Dishes.Add(new infoDish
             {
                 Name = "Хашбраун с беконом, сырным соусом и яйцом пашот, 250 грамм",
                 Price = 570,
                 ImagePath = "3.JPG"
             });
-            breakfast.Dishes.Add(new Dish
+            breakfast.Dishes.Add(new infoDish
             {
                 Name = "Омлет с пармезаном, 250 грамм",
                 Price = 350,
@@ -39,25 +39,25 @@ namespace CulinaryDictionary
             });
 
             var salads = new Category { Name = "Салаты" };
-            salads.Dishes.Add(new Dish
+            salads.Dishes.Add(new infoDish
             {
                 Name = "Средиземноморский салат с тигровыми креветками, 205 грамм",
                 Price = 850,
                 ImagePath = "5.JPG"
             });
-            salads.Dishes.Add(new Dish
+            salads.Dishes.Add(new infoDish
             {
                 Name = "Стейк салат с копчеными томатами и орехами кешью, 160 грамм",
                 Price = 830,
                 ImagePath = "6.JPG"
             });
-            salads.Dishes.Add(new Dish
+            salads.Dishes.Add(new infoDish
             {
                 Name = "Цезарь с креветками, 200 грамм",
                 Price = 690,
                 ImagePath = "7.JPG"
             });
-            salads.Dishes.Add(new Dish
+            salads.Dishes.Add(new infoDish
             {
                 Name = "Салат с баклажанами гриль, томатами и кубиками моцареллы, 270 грамм",
                 Price = 560,
@@ -65,25 +65,25 @@ namespace CulinaryDictionary
             });
 
             var soups = new Category { Name = "Супы" };
-            soups.Dishes.Add(new Dish
+            soups.Dishes.Add(new infoDish
             {
                 Name = "Суп - пюре из копченых томатов с сыром моцарелла, 310",
                 Price = 490,
                 ImagePath = "9.JPG"
             });
-            soups.Dishes.Add(new Dish
+            soups.Dishes.Add(new infoDish
             {
                 Name = "Крем - суп из белых грибов, 300 грамм",
                 Price = 490,
                 ImagePath = "10.JPG"
             });
-            soups.Dishes.Add(new Dish
+            soups.Dishes.Add(new infoDish
             {
                 Name = "Сицилийский рыбный суп, 350 грамм",
                 Price = 590,
                 ImagePath = "11.JPG"
             });
-            soups.Dishes.Add(new Dish
+            soups.Dishes.Add(new infoDish
             {
                 Name = "Сливочная уха с лососем, судаком и окунем, 330 грамм",
                 Price = 590,
@@ -91,31 +91,31 @@ namespace CulinaryDictionary
             });
 
             var hot_dishes = new Category { Name = "Горячие блюда" };
-            hot_dishes.Dishes.Add(new Dish
+            hot_dishes.Dishes.Add(new infoDish
             {
                 Name = "Фермерский цыпленок с соусом аррабиата, 370 грамм",
                 Price = 990,
                 ImagePath = "13.JPG"
             });
-            hot_dishes.Dishes.Add(new Dish
+            hot_dishes.Dishes.Add(new infoDish
             {
                 Name = "Стейк мачете, 150 грамм",
                 Price = 1350,
                 ImagePath = "14.JPG"
             });
-            hot_dishes.Dishes.Add(new Dish
+            hot_dishes.Dishes.Add(new infoDish
             {
                 Name = "Лосось на гриле/на пару, 120 грамм",
                 Price = 990,
                 ImagePath = "15.JPG"
             });
-            hot_dishes.Dishes.Add(new Dish
+            hot_dishes.Dishes.Add(new infoDish
             {
                 Name = "Куринная грудка с киноа и зеленым салатом, 275 грамм",
                 Price = 560,
                 ImagePath = "16.JPG"
             });
-            hot_dishes.Dishes.Add(new Dish
+            hot_dishes.Dishes.Add(new infoDish
             {
                 Name = "Соте из морепродуктов в трюфельнос соусе, 360 грамм",
                 Price = 990,
@@ -123,24 +123,25 @@ namespace CulinaryDictionary
             });
 
             var desserts = new Category { Name = "Десерты" };
-            desserts.Dishes.Add(new Dish
+            desserts.Dishes.Add(new infoDish
             {
                 Name = "Тарт татен яблочный, 180",
                 Price = 490,
                 ImagePath = "18.JPG"
             });
-            desserts.Dishes.Add(new Dish
+            desserts.Dishes.Add(new infoDish
             {
                 Name = "Фисташковая панна котта с вишневым вареньем, 140",
                 Price = 490,
                 ImagePath = "19.JPG"
             });
-            desserts.Dishes.Add(new Dish
+            desserts.Dishes.Add(new infoDish
             {
                 Name = "Шоколадный бисквит, 160",
                 Price = 550,
                 ImagePath = "20.JPG"
             });
+            Categories.AddRange(new[] { breakfast, salads, soups, hot_dishes, desserts });
         }
     }
 }

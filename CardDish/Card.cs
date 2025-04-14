@@ -7,12 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace CardDish
 {
-    public partial class CardDish: UserControl
-    {
-        public CardDish()
+    public partial class Card: UserControl
+    {      
+
+        public Card()
         {
             InitializeComponent();this.BorderStyle = BorderStyle.FixedSingle;
         this.BackColor = Color.White;
@@ -51,17 +53,47 @@ namespace CardDish
         {
 
         }
-        public void SetDishInfo(CardDish dish)
+        public void SetDishInfo(Card dish)
         {
-            lblDishName.Text = dish.Name;
+            // Устанавливаем название блюда
+            lblDishName.Text = dish.Name ?? "Без названия";
+
+            // Устанавливаем цену (исправлено с dish.Price)
             lblPrice.Text = $"Цена: {dish.lblPrice} ₽";
-           
 
-            
+            // Загружаем изображение
+            if (!string.IsNullOrEmpty(dish.ImagePath))
+            {
+                string imagePath = Path.Combine(Application.StartupPath, "Images", "Dishes", dish.ImagePath);
 
-           
-           
+                try
+                {
+                    if (File.Exists(imagePath))
+                    {
+                        // Освобождаем предыдущее изображение
+                        if (picDishImage.Image != null)
+                        {
+                            var oldImage = picDishImage.Image;
+                            picDishImage.Image = null;
+                            oldImage.Dispose();
+                        }
+
+                        picDishImage.Image = Image.FromFile(imagePath);
+                    }
+                    else
+                    {
+                        
+                    }
+                }
+                catch
+                {
+                   
+                }
+            }
         }
 
+       
     }
+
+    
 }

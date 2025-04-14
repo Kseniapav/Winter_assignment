@@ -48,7 +48,7 @@
   <ItemGroup>
     <Compile Include="Category.cs" />
     <Compile Include="DataRepository.cs" />
-    <Compile Include="Dish.cs" />
+    <Compile Include="infoDish.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,6 +81,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CardDish\CardDish.csproj">
+      <Project>{b15f863b-e44b-483a-8a2a-e3fef7eed951}</Project>
+      <Name>CardDish</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

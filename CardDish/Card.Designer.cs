@@ -1,6 +1,6 @@
 ﻿namespace CardDish
 {
-    partial class CardDish
+    partial class Card
     {
         /// <summary>
         /// Обязательная переменная конструктора.
@@ -60,14 +60,14 @@
             this.lblPrice.TabIndex = 2;
             this.lblPrice.Text = "label1";
             // 
-            // CardDish
+            // Card
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.lblPrice);
             this.Controls.Add(this.lblDishName);
             this.Controls.Add(this.picDishImage);
-            this.Name = "CardDish";
+            this.Name = "Card";
             this.Size = new System.Drawing.Size(212, 286);
             this.Load += new System.EventHandler(this.CardDish_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picDishImage)).EndInit();

@@ -9,11 +9,11 @@ namespace CulinaryDictionary
     internal class Category
     {
         public string Name { get; set; }
-        public List<Dish> Dishes { get; set; }
+        public List<infoDish> Dishes { get; set; }
 
         public Category()
         {
-            Dishes = new List<Dish>();
+            Dishes = new List<infoDish>();
         }
     }
 }
