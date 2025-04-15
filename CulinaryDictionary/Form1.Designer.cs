@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.nameMenu = new System.Windows.Forms.Label();
             this.treeViewCategories = new System.Windows.Forms.TreeView();
             this.lblCategoryName = new System.Windows.Forms.Label();
             this.flowLayoutDishes = new System.Windows.Forms.FlowLayoutPanel();
-            this.nameMenu = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -60,12 +60,22 @@
             this.splitContainer1.SplitterDistance = 266;
             this.splitContainer1.TabIndex = 0;
             // 
+            // nameMenu
+            // 
+            this.nameMenu.AutoSize = true;
+            this.nameMenu.Font = new System.Drawing.Font("Microsoft YaHei", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.nameMenu.Location = new System.Drawing.Point(12, 9);
+            this.nameMenu.Name = "nameMenu";
+            this.nameMenu.Size = new System.Drawing.Size(208, 46);
+            this.nameMenu.TabIndex = 2;
+            this.nameMenu.Text = "Категории:";
+            // 
             // treeViewCategories
             // 
             this.treeViewCategories.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.treeViewCategories.Font = new System.Drawing.Font("Microsoft YaHei", 21.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.treeViewCategories.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.treeViewCategories.Indent = 19;
-            this.treeViewCategories.Location = new System.Drawing.Point(3, 67);
+            this.treeViewCategories.Location = new System.Drawing.Point(-7, 89);
             this.treeViewCategories.Name = "treeViewCategories";
             this.treeViewCategories.Size = new System.Drawing.Size(274, 293);
             this.treeViewCategories.TabIndex = 1;
@@ -91,16 +101,6 @@
             this.flowLayoutDishes.Name = "flowLayoutDishes";
             this.flowLayoutDishes.Size = new System.Drawing.Size(524, 391);
             this.flowLayoutDishes.TabIndex = 0;
-            // 
-            // nameMenu
-            // 
-            this.nameMenu.AutoSize = true;
-            this.nameMenu.Font = new System.Drawing.Font("Microsoft YaHei", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.nameMenu.Location = new System.Drawing.Point(12, 9);
-            this.nameMenu.Name = "nameMenu";
-            this.nameMenu.Size = new System.Drawing.Size(208, 46);
-            this.nameMenu.TabIndex = 2;
-            this.nameMenu.Text = "Категории:";
             // 
             // Form1
             // 

@@ -1,54 +1,40 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using classDish;
+using static classDish.Class1;
 
 namespace CardDish
 {
     public partial class Card : UserControl
     {
-        private readonly string ImagePath;
 
         public Card()
         {
             InitializeComponent(); this.BorderStyle = BorderStyle.FixedSingle;
 
-            this.MouseEnter += CardDish_MouseEnter; ;
-            this.MouseLeave += CardDish_MouseLeave; ;
         }
 
-        private void CardDish_MouseLeave(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-        }
 
-        private void CardDish_MouseEnter(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-        }
+  
 
         private void CardDish_Load(object sender, EventArgs e)
         {
 
         }
-        public void SetDishInfo(Card DataRepository)
+        public void SetDishInfo(infoDish dataRepository)
         {
             // Устанавливаем название
-            lblDishName.Text = DataRepository.Name;
+            lblDishName.Text = dataRepository.Name;
 
             // Устанавливаем цену
-            lblPrice.Text = $"Цена: {DataRepository.lblPrice} ₽";
+            lblPrice.Text = $"Цена: {dataRepository.Price} ₽";
 
             // Загружаем изображение
-            if (!string.IsNullOrEmpty(DataRepository.ImagePath))
+            if (!string.IsNullOrEmpty(dataRepository.ImagePath))
             {
-                string fullPath = Path.Combine(Application.StartupPath, "Images", "Dishes", DataRepository.ImagePath);
+                string fullPath = Path.Combine(Application.StartupPath, "Images", "Dishes", dataRepository.ImagePath);
 
                 try
                 {

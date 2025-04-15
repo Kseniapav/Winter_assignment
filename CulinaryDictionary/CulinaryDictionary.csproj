@@ -46,9 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Category.cs" />
-    <Compile Include="DataRepository.cs" />
-    <Compile Include="infoDish.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,6 +83,10 @@
     <ProjectReference Include="..\CardDish\CardDish.csproj">
       <Project>{b15f863b-e44b-483a-8a2a-e3fef7eed951}</Project>
       <Name>CardDish</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\classDish\classDish.csproj">
+      <Project>{488D1546-139F-4160-A533-0EBEB53FA5F6}</Project>
+      <Name>classDish</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

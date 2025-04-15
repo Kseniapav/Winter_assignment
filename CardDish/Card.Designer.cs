@@ -36,7 +36,7 @@
             // 
             // picDishImage
             // 
-            this.picDishImage.Location = new System.Drawing.Point(3, 12);
+            this.picDishImage.Location = new System.Drawing.Point(16, 12);
             this.picDishImage.Name = "picDishImage";
             this.picDishImage.Size = new System.Drawing.Size(253, 195);
             this.picDishImage.TabIndex = 0;
@@ -47,9 +47,10 @@
             this.lblDishName.AutoSize = true;
             this.lblDishName.Location = new System.Drawing.Point(13, 220);
             this.lblDishName.Name = "lblDishName";
-            this.lblDishName.Size = new System.Drawing.Size(35, 13);
+            this.lblDishName.Size = new System.Drawing.Size(57, 13);
             this.lblDishName.TabIndex = 1;
-            this.lblDishName.Text = "label1";
+            this.lblDishName.Text = "Описание";
+            this.lblDishName.UseMnemonic = false;
             // 
             // lblPrice
             // 
@@ -64,11 +65,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.Controls.Add(this.lblPrice);
             this.Controls.Add(this.lblDishName);
             this.Controls.Add(this.picDishImage);
             this.Name = "Card";
-            this.Size = new System.Drawing.Size(259, 286);
+            this.Size = new System.Drawing.Size(280, 286);
             this.Load += new System.EventHandler(this.CardDish_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picDishImage)).EndInit();
             this.ResumeLayout(false);

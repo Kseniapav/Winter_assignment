@@ -8,17 +8,20 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CardDish;
-using CulinaryDictionary;
+using classDish;
+using static classDish.Class1;
+
 
 namespace CulinaryDictionary
 {
     public partial class Form1 : Form
     {
-
+        DataRepository class1 = new DataRepository();
         public Form1()
         {
             InitializeComponent();
-            DataRepository.InitializeSampleData();
+            class1.InitializeSampleData();
+
 
             // Заполнение TreeView
             InitializeCategoriesTree();
@@ -33,7 +36,7 @@ namespace CulinaryDictionary
             treeViewCategories.BeginUpdate();
             treeViewCategories.Nodes.Clear();
 
-            foreach (var category in DataRepository.Categories)
+            foreach (var category in class1.Categories)
             {
                 var node = new TreeNode(category.Name) { Tag = category };
                 treeViewCategories.Nodes.Add(node);
@@ -58,7 +61,7 @@ namespace CulinaryDictionary
                 foreach (var dish in selectedCategory.Dishes)
                 {
                     var card = new Card();
-                    card.SetDishInfo(card);
+                    card.SetDishInfo(dish);
                     flowLayoutDishes.Controls.Add(card);
                 }
             }
