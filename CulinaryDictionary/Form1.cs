@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using CardDish;
 using classDish;
+using FormQuantity;
 using static classDish.Class1;
 
 
@@ -29,6 +30,7 @@ namespace CulinaryDictionary
             // Настройка внешнего вида
             this.Text = "Наше меню:";
             this.WindowState = FormWindowState.Maximized;
+
         }
 
         private void InitializeCategoriesTree()
@@ -62,16 +64,33 @@ namespace CulinaryDictionary
                 {
                     var card = new Card();
                     card.SetDishInfo(dish);
+                    card.AddToCartClicked += Dish_AddToCartClicked;
                     flowLayoutDishes.Controls.Add(card);
+
                 }
             }
         }
 
-        
+        private void Dish_AddToCartClicked(object sender, EventArgs e)
+        {
+            var dishControl = sender as Card;
+            var form = new Quantity(dishControl.lblDishName.Text, dishControl.Price);
+
+            if (form.ShowDialog() == DialogResult.OK)
+            {
+                MessageBox.Show($"Добавлено в корзину: {dishControl.lblDishName} × {form._Quantity}\n" +
+                                $"Сумма: {form.TotalPrice:C}");
+            }
+        }
 
         private void Form1_Load(object sender, EventArgs e)
         {
             
+        }
+
+        private void flowLayoutDishes_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

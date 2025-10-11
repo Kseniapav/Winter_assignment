@@ -67,7 +67,7 @@ namespace CulinaryDictionary
             var soups = new Category { Name = "Супы" };
             soups.Dishes.Add(new infoDish
             {
-                Name = "Суп - пюре из копченых томатов с сыром моцарелла, 310",
+                Name = "Суп - пюре из копченых томатов с сыром моцарелла, 310 грамм",
                 Price = 490,
                 ImagePath = "9.JPG"
             });
@@ -125,19 +125,19 @@ namespace CulinaryDictionary
             var desserts = new Category { Name = "Десерты" };
             desserts.Dishes.Add(new infoDish
             {
-                Name = "Тарт татен яблочный, 180",
+                Name = "Тарт татен яблочный, 180 грамм",
                 Price = 490,
                 ImagePath = "18.JPG"
             });
             desserts.Dishes.Add(new infoDish
             {
-                Name = "Фисташковая панна котта с вишневым вареньем, 140",
+                Name = "Фисташковая панна котта с вишневым вареньем, 140 грамм",
                 Price = 490,
                 ImagePath = "19.JPG"
             });
             desserts.Dishes.Add(new infoDish
             {
-                Name = "Шоколадный бисквит, 160",
+                Name = "Шоколадный бисквит, 160 грамм",
                 Price = 550,
                 ImagePath = "20.JPG"
             });

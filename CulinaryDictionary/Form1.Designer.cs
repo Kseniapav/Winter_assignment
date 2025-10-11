@@ -47,13 +47,13 @@
             // 
             // splitContainer1.Panel1
             // 
-            this.splitContainer1.Panel1.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.splitContainer1.Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.splitContainer1.Panel1.Controls.Add(this.nameMenu);
             this.splitContainer1.Panel1.Controls.Add(this.treeViewCategories);
             // 
             // splitContainer1.Panel2
             // 
-            this.splitContainer1.Panel2.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.splitContainer1.Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.splitContainer1.Panel2.Controls.Add(this.lblCategoryName);
             this.splitContainer1.Panel2.Controls.Add(this.flowLayoutDishes);
             this.splitContainer1.Size = new System.Drawing.Size(800, 450);
@@ -63,31 +63,34 @@
             // nameMenu
             // 
             this.nameMenu.AutoSize = true;
-            this.nameMenu.Font = new System.Drawing.Font("Microsoft YaHei", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.nameMenu.Font = new System.Drawing.Font("Arial Narrow", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.nameMenu.ForeColor = System.Drawing.Color.Gray;
             this.nameMenu.Location = new System.Drawing.Point(12, 9);
             this.nameMenu.Name = "nameMenu";
-            this.nameMenu.Size = new System.Drawing.Size(208, 46);
+            this.nameMenu.Size = new System.Drawing.Size(177, 42);
             this.nameMenu.TabIndex = 2;
             this.nameMenu.Text = "Категории:";
             // 
             // treeViewCategories
             // 
-            this.treeViewCategories.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.treeViewCategories.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.treeViewCategories.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.treeViewCategories.ForeColor = System.Drawing.Color.Gray;
             this.treeViewCategories.Indent = 19;
             this.treeViewCategories.Location = new System.Drawing.Point(-7, 89);
             this.treeViewCategories.Name = "treeViewCategories";
-            this.treeViewCategories.Size = new System.Drawing.Size(274, 293);
+            this.treeViewCategories.Size = new System.Drawing.Size(274, 226);
             this.treeViewCategories.TabIndex = 1;
             this.treeViewCategories.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView2_AfterSelect);
             // 
             // lblCategoryName
             // 
             this.lblCategoryName.AutoSize = true;
-            this.lblCategoryName.Font = new System.Drawing.Font("Microsoft YaHei", 20.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblCategoryName.Font = new System.Drawing.Font("Arial Narrow", 20.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblCategoryName.ForeColor = System.Drawing.Color.Gray;
             this.lblCategoryName.Location = new System.Drawing.Point(3, 9);
             this.lblCategoryName.Name = "lblCategoryName";
-            this.lblCategoryName.Size = new System.Drawing.Size(416, 35);
+            this.lblCategoryName.Size = new System.Drawing.Size(325, 31);
             this.lblCategoryName.TabIndex = 1;
             this.lblCategoryName.Text = "Блюда выбранной категории:";
             // 
@@ -96,11 +99,12 @@
             this.flowLayoutDishes.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.flowLayoutDishes.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.flowLayoutDishes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.flowLayoutDishes.Location = new System.Drawing.Point(3, 56);
             this.flowLayoutDishes.Name = "flowLayoutDishes";
-            this.flowLayoutDishes.Size = new System.Drawing.Size(524, 391);
+            this.flowLayoutDishes.Size = new System.Drawing.Size(524, 306);
             this.flowLayoutDishes.TabIndex = 0;
+            this.flowLayoutDishes.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutDishes_Paint);
             // 
             // Form1
             // 

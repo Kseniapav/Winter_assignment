@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{40913121-B657-43DB-856F-A40A229D8E55}</ProjectGuid>
+    <ProjectGuid>{BE3B3C09-D905-476D-BCBC-AF98E8E532FB}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>CulinaryDictionary</RootNamespace>
-    <AssemblyName>CulinaryDictionary</AssemblyName>
+    <RootNamespace>FormQuantity</RootNamespace>
+    <AssemblyName>FormQuantity</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -46,16 +46,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="Quantity.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Quantity.Designer.cs">
+      <DependentUpon>Quantity.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Quantity.resx">
+      <DependentUpon>Quantity.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -85,12 +85,8 @@
       <Name>CardDish</Name>
     </ProjectReference>
     <ProjectReference Include="..\classDish\classDish.csproj">
-      <Project>{488D1546-139F-4160-A533-0EBEB53FA5F6}</Project>
+      <Project>{488d1546-139f-4160-a533-0ebeb53fa5f6}</Project>
       <Name>classDish</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\FormQuantity\FormQuantity.csproj">
-      <Project>{BE3B3C09-D905-476D-BCBC-AF98E8E532FB}</Project>
-      <Name>FormQuantity</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
