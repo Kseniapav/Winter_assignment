@@ -61,23 +61,21 @@ namespace CardDish
             // Загружаем изображение
             if (!string.IsNullOrEmpty(dataRepository.ImagePath))
             {
-                string fullPath = Path.Combine(Application.StartupPath, "Images", "Dishes", dataRepository.ImagePath);
-
                 try
                 {
-                    if (File.Exists(fullPath))
-                    {
-                        picDishImage.Image?.Dispose(); // Освобождаем старое изображение
-                        picDishImage.Image = Image.FromFile(fullPath);
-                    }
-                    else
-                    {
 
+                    var resourceManager = Properties.Resources.ResourceManager;
+                    var image = (Image)resourceManager.GetObject(dataRepository.ImagePath);
+
+                    if (image != null)
+                    {
+                        picDishImage.Image?.Dispose();
+                        picDishImage.Image = image;
                     }
                 }
-                catch
+                catch (Exception ex)
                 {
-
+                    MessageBox.Show($"Ошибка загрузки: {ex.Message}");
                 }
             }
         }

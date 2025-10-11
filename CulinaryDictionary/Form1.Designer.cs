@@ -102,7 +102,7 @@
             this.flowLayoutDishes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.flowLayoutDishes.Location = new System.Drawing.Point(3, 56);
             this.flowLayoutDishes.Name = "flowLayoutDishes";
-            this.flowLayoutDishes.Size = new System.Drawing.Size(524, 306);
+            this.flowLayoutDishes.Size = new System.Drawing.Size(524, 360);
             this.flowLayoutDishes.TabIndex = 0;
             this.flowLayoutDishes.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutDishes_Paint);
             // 
