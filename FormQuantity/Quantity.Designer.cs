@@ -50,10 +50,11 @@
             // numericUpDownQuantity
             // 
             this.numericUpDownQuantity.BackColor = System.Drawing.Color.Maroon;
+            this.numericUpDownQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.numericUpDownQuantity.ForeColor = System.Drawing.Color.White;
             this.numericUpDownQuantity.Location = new System.Drawing.Point(255, 63);
             this.numericUpDownQuantity.Name = "numericUpDownQuantity";
-            this.numericUpDownQuantity.Size = new System.Drawing.Size(49, 20);
+            this.numericUpDownQuantity.Size = new System.Drawing.Size(46, 26);
             this.numericUpDownQuantity.TabIndex = 1;
             this.numericUpDownQuantity.ValueChanged += new System.EventHandler(this.numericUpDownQuantity_ValueChanged);
             // 
@@ -89,6 +90,7 @@
             this.buttonConfirm.TabIndex = 4;
             this.buttonConfirm.Text = "Добавить в корзину";
             this.buttonConfirm.UseVisualStyleBackColor = true;
+            this.buttonConfirm.Click += new System.EventHandler(this.buttonConfirm_Click_1);
             // 
             // Quantity
             // 

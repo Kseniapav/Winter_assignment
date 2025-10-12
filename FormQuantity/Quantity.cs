@@ -53,5 +53,13 @@ namespace FormQuantity
         {
 
         }
+
+        private void buttonConfirm_Click_1(object sender, EventArgs e)
+        {
+            _Quantity = (int)numericUpDownQuantity.Value;
+            TotalPrice = _Quantity * _Quantity;
+            this.DialogResult = DialogResult.OK;  
+            this.Close();
+        }
     }
 }

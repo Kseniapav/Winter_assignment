@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using CardDish;
 using classDish;
 using FormQuantity;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
 using static classDish.Class1;
 
 
@@ -18,6 +19,7 @@ namespace CulinaryDictionary
     public partial class Form1 : Form
     {
         DataRepository class1 = new DataRepository();
+        private List<CartItem> cart = new List<CartItem>();
         public Form1()
         {
             InitializeComponent();
@@ -74,12 +76,30 @@ namespace CulinaryDictionary
         private void Dish_AddToCartClicked(object sender, EventArgs e)
         {
             var dishControl = sender as Card;
+            if (dishControl == null) return;
+
+            // Открываем форму выбора количества
             var form = new Quantity(dishControl.lblDishName.Text, dishControl.Price);
 
             if (form.ShowDialog() == DialogResult.OK)
             {
-                MessageBox.Show($"Добавлено в корзину: {dishControl.lblDishName} × {form._Quantity}\n" +
-                                $"Сумма: {form.TotalPrice:C}");
+                // ✅ Создаём новый элемент корзины
+                var item = new CartItem
+                {
+                    DishName = dishControl.lblDishName.Text,
+                    Price = dishControl.Price,
+                    Quantity = form._Quantity,
+                };
+
+                // ✅ Добавляем в общий список корзины
+                cart.Add(item);
+
+                MessageBox.Show(
+                    $"Добавлено в корзину: {item.DishName} × {item.Quantity}\nСумма: {item.Total:C}",
+                    "Корзина",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information
+                );
             }
         }
 
@@ -91,6 +111,12 @@ namespace CulinaryDictionary
         private void flowLayoutDishes_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void btnCart_Click(object sender, EventArgs e)
+        {
+            var cartForm = new FormCart(cart);
+            cartForm.ShowDialog();
         }
     }
 }

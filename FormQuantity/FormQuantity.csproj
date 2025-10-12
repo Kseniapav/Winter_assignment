@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormCart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCart.Designer.cs">
+      <DependentUpon>FormCart.cs</DependentUpon>
+    </Compile>
     <Compile Include="Quantity.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -54,6 +60,15 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ControlCartItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlCartItem.Designer.cs">
+      <DependentUpon>ControlCartItem.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FormCart.resx">
+      <DependentUpon>FormCart.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Quantity.resx">
       <DependentUpon>Quantity.cs</DependentUpon>
     </EmbeddedResource>
@@ -66,6 +81,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ControlCartItem.resx">
+      <DependentUpon>ControlCartItem.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

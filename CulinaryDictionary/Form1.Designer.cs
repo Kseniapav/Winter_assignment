@@ -33,6 +33,7 @@
             this.treeViewCategories = new System.Windows.Forms.TreeView();
             this.lblCategoryName = new System.Windows.Forms.Label();
             this.flowLayoutDishes = new System.Windows.Forms.FlowLayoutPanel();
+            this.btnCart = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -48,6 +49,7 @@
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.splitContainer1.Panel1.Controls.Add(this.btnCart);
             this.splitContainer1.Panel1.Controls.Add(this.nameMenu);
             this.splitContainer1.Panel1.Controls.Add(this.treeViewCategories);
             // 
@@ -106,6 +108,17 @@
             this.flowLayoutDishes.TabIndex = 0;
             this.flowLayoutDishes.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutDishes_Paint);
             // 
+            // btnCart
+            // 
+            this.btnCart.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnCart.Location = new System.Drawing.Point(12, 400);
+            this.btnCart.Name = "btnCart";
+            this.btnCart.Size = new System.Drawing.Size(98, 38);
+            this.btnCart.TabIndex = 3;
+            this.btnCart.Text = "Корзина";
+            this.btnCart.UseVisualStyleBackColor = true;
+            this.btnCart.Click += new System.EventHandler(this.btnCart_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -132,6 +145,7 @@
         private System.Windows.Forms.Label lblCategoryName;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutDishes;
         private System.Windows.Forms.Label nameMenu;
+        private System.Windows.Forms.Button btnCart;
     }
 }
 
